@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Project-2 Company Database</title>
+
+    <!-- Font awesome icons -->
+    <script src="https://kit.fontawesome.com/6f3003e390.js" crossorigin="anonymous"></script>
+    <!-- font awesome icons -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap styles -->
+    <link rel="stylesheet" type="text/css" href="vendors/bootstrap/css/bootstrap.min.css">
+
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <!-- Favicon -->
+
+
+    <!-- table styles -->
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="./vendors/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="./vendors/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="./vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="./css/util.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <!--===============================================================================================-->
+    <!-- table styles -->
+
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300;400;600&display=swap" rel="stylesheet" />
+
+    <!-- css styles -->
+
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+</head>
+
+<body>
+
+
+    <div class="main-message"></div>
+    <div class="card desktop-display mt-5 mx-auto overflow-hidden">
+        <div class="card-header row align-items-center justify-content-between">
+            <h2 class="col mb-0 ms-3 text-start">Employee Directory</h2>
+            <p class="col mb-0 text-end">
+                <button class="btn btn-primary add_employee me-3" data-bs-toggle="offcanvas" href="#add_employee_offcanvas" role="button" aria-controls="add_employee_offcanvas">Add Employee</button>
+            </p>
+
+            <div class="row mx-auto">
+                <div class="col p-3">
+                    <h4 class="mb-3">Keywords</h4>
+                    <input type="text" class="search" placeholder="Type in a keyword or name...">
+
+                </div>
+
+                <div class="col p-3">
+                    <h4 class="mb-3">Department</h4>
+
+                    <select name="department-filter" class="department-filter">
+
+                    </select>
+
+
+                </div>
+                <div class="col p-3">
+                    <h4 class="mb-3">Location</h4>
+
+                    <select name="location-filter" class="location-filter">
+
+                    </select>
+
+
+                </div>
+
+
+
+
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+        <div class="card-body table100 ver1">
+
+            <div class="table100-body js-pscroll">
+                <table>
+                    <thead class="position-sticky top-0">
+                        <tr class="row100 head sortable_headers">
+                            <th class="cell100 column1 ps-3">Last Name</th>
+                            <th class="cell100 column2">First Name</th>
+                            <th class="cell100 column3">Job Title</th>
+                            <th class="cell100 column4">Email</th>
+                            <th class="cell100 column5"> Department</th>
+                            <th class="cell100 column6"> Location</th>
+                            <th class="cell100 column7 text-center">Action</th>
+
+                        </tr>
+
+                    </thead>
+                    <tbody class="employees">
+
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+    </div>
+    <div class="card mobile-display mt-5 mx-auto overflow-hidden">
+        <div class="row align-items-center justify-content-between pt-3 pb-3">
+            
+            <h2 class="col mb-0 ms-3 text-start">Employees</h2>
+            <p class="col mb-0 text-end">
+                <button class="btn btn-primary add_employee me-3" data-bs-toggle="offcanvas" href="#add_employee_offcanvas" role="button" aria-controls="add_employee_offcanvas">+</button>
+            </p>
+        </div>
+            <div class="container overflow-auto mobile-contact-display">
+
+                <div class="row m-0 letter">
+        
+                    <h4 class="first-letters p-3 m-0 rounded-2">A</h4>
+                
+        
+                </div>
+
+                <div class="row m-0 name">
+                    <p class="m-0 p-3">AC <span class="d-inline-block ms-5">Aidan Clark</span></p>
+    
+                </div>
+               
+         
+       
+            </div>
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+   
+
+    <!-- Font awesome -->
+    <script src="./vendors/Fontawesome5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+    <!-- Font awesome -->
+
+    <!-- jquery script -->
+    <script src="./vendors/jquery/jquery-3.6.0.min.js"></script>
+
+    <!-- jquery script -->
+
+
+    <!-- bootstrap script -->
+    <script src="./vendors/bootstrap/js/popper.js"></script>
+    <script src="./vendors/bootstrap/js/bootstrap.bundle.js"></script>
+    <!-- bootstrap script -->
+
+    <!-- select2 -->
+    <script src="./vendors/select2/select2.min.js"></script>
+    <!-- select2 -->
+
+    <!-- perfect scrollbar -->
+    <script src="./vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <!-- perfect scrollbar -->
+
+    <script>
+        $('.js-pscroll').each(function() {
+            var ps = new PerfectScrollbar(this);
+
+            $(window).on('resize', function() {
+                ps.update();
+            })
+        });
+    </script>
+
+    <script type="module" src="js\script.js">
+
+    </script>
+</body>
+
+</html>
