@@ -56,20 +56,20 @@
         <div class="card-header row align-items-center justify-content-between">
             <h2 class="col mb-0 ms-3 text-start">Employee Directory</h2>
             <p class="col mb-0 text-end">
-                <button class="btn btn-primary add_employee me-3" data-bs-toggle="offcanvas" href="#add_employee_offcanvas" role="button" aria-controls="add_employee_offcanvas">Add Employee</button>
+                <button class="btn btn-primary btn-sm add_employee me-3" data-bs-toggle="offcanvas" href="#add_employee_offcanvas" role="button" aria-controls="add_employee_offcanvas">Add Employee</button>
             </p>
 
             <div class="row mx-auto">
                 <div class="col p-3">
                     <h4 class="mb-3">Keywords</h4>
-                    <input type="text" class="search" placeholder="Type in a keyword or name...">
+                    <input type="text" class="search ps-2" placeholder="Enter keyword...">
 
                 </div>
 
                 <div class="col p-3">
                     <h4 class="mb-3">Department</h4>
 
-                    <select name="department-filter" class="department-filter">
+                    <select name="department-filter" class="department-filter ps-2">
 
                     </select>
 
@@ -78,7 +78,7 @@
                 <div class="col p-3">
                     <h4 class="mb-3">Location</h4>
 
-                    <select name="location-filter" class="location-filter">
+                    <select name="location-filter" class="location-filter ps-2">
 
                     </select>
 
@@ -105,12 +105,12 @@
                 <table>
                     <thead class="position-sticky top-0">
                         <tr class="row100 head sortable_headers">
-                            <th class="cell100 column1 ps-3">Last Name</th>
-                            <th class="cell100 column2">First Name</th>
-                            <th class="cell100 column3">Job Title</th>
-                            <th class="cell100 column4">Email</th>
-                            <th class="cell100 column5"> Department</th>
-                            <th class="cell100 column6"> Location</th>
+                            <th class="cell100 column1 text-center">Last Name</th>
+                            <th class="cell100 column2 text-center">First Name</th>
+                            <th class="cell100 column3 text-center">Job Title</th>
+                            <th class="cell100 column4 text-center">Email</th>
+                            <th class="cell100 column5 text-center"> Department</th>
+                            <th class="cell100 column6 text-center"> Location</th>
                             <th class="cell100 column7 text-center">Action</th>
 
                         </tr>
@@ -136,7 +136,7 @@
             
             <h2 class="col mb-0 ms-3 text-start">Employees</h2>
             <p class="col mb-0 text-end">
-                <button class="btn btn-primary add_employee me-3" data-bs-toggle="offcanvas" href="#add_employee_offcanvas" role="button" aria-controls="add_employee_offcanvas">+</button>
+                <button class="btn btn-primary add_employee mobile_add_employee me-3" data-bs-toggle="offcanvas" href="#add_employee_offcanvas" role="button" aria-controls="add_employee_offcanvas">+</button>
             </p>
         </div>
             <div class="container overflow-auto mobile-contact-display">

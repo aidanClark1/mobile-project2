@@ -913,7 +913,7 @@ response.data.forEach(person => {
     if(person.firstName.charAt(0) === letter){
 
     console.log(person.firstName);
-    nameString += `<div class="row m-0 name mb-2 mt-2">
+    nameString += `<div class="row m-0 name mb-2 mt-2 name_select">
     <p class="m-0 p-3">${letter}${person.lastName[0]} <span class="d-inline-block ms-4 name">${person.firstName} ${person.lastName}</span></p>
 
 </div>
